@@ -1,0 +1,4 @@
+﻿  Pathfinder.cpp
+c:\users\chant\onedrive\documents\visual studio 2015\projects\cs 235 projects\lab 5 -- 3d maze\lab 5 -- 3d maze\pathfinder.cpp(12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Lab 5 -- 3D Maze.vcxproj -> C:\Users\chant\OneDrive\Documents\Visual Studio 2015\Projects\CS 235 Projects\Lab 5 -- 3D Maze\Debug\Lab 5 -- 3D Maze.exe
+  Lab 5 -- 3D Maze.vcxproj -> C:\Users\chant\OneDrive\Documents\Visual Studio 2015\Projects\CS 235 Projects\Lab 5 -- 3D Maze\Debug\Lab 5 -- 3D Maze.pdb (Partial PDB)

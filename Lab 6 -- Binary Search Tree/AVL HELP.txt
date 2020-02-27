@@ -1,0 +1,114 @@
+
+Node.h will contain int heightLeft, int heightRight
+
+bool BST::insert(Node *& parent, int data) {
+	if (parent == NULL) {
+		parent = new Node(data, NULL, NULL);
+		//root = parent;
+		return true;
+	}
+	else if (parent->value < data) {
+		bool result;
+		result = insert(parent->right, data);
+		if (result) {
+			value->rightHeight = updateRightHeight(data);
+			if (!isBalanced(parent)) {
+				int condition = findCondition(parent);
+				rotate(parent, condition);
+			}
+		}
+		return result;
+	}
+	else if (parent->value > data) {  //rewrite
+		insert(parent->left, data);
+	}
+	else {
+		return false;
+	}
+}
+
+int updateRightHeight(node *& parent) {
+	if (parent->right == NULL) {
+		return 0;
+	}
+	h = max(parent->right->leftHeight, parent->right->rightHeight);
+	return h + 1;
+}
+
+int updateLeftHeight(node *& parent) {
+	if (parent->left == NULL) {
+		return 0;
+	}
+	h = max(parent->left->leftHeight, parent->left->rightHeight);
+	returh h + 1;
+}
+
+int max(int left, int right) {
+	if (left < right) {
+		return right;
+	}
+	else {
+		return left;
+	}
+}
+
+bool isBalanced(Node *& parent) {
+	if (abs(parent->rightHeight - parent->leftHeight) > 1) {
+		return false;
+	}
+	return true;
+}
+
+
+//0 left-left
+//1 left-right
+//2 right-left
+//3 right-right
+
+int findCondition(Node *& parent) {
+	if (parent->leftHeight >= parent->rightHeight) {
+		if (parent->left->leftHeight >= parent->left->rightHeight) {
+			return 0;
+		}
+		else {
+			return 1;
+		}
+	}
+	if (parent->leftHeight <= parent->rightHeight) {
+		if ()
+	}
+
+}
+
+void rotate(Node *& parent, int condition) {
+	switch(condition) {
+		case 0:   // left-left
+			rotateRight(parent);
+			break;
+
+		case 1:   //left-right
+			rotateLeft(parent->left);
+			rotateRight(parent);
+			break;
+
+		case 2:   //right-left
+			rotateRight(parent->right);
+			rotateLeft(parent);
+			break;
+
+		case 3:   //right-right
+			rotateLeft(parent);
+			break;
+	}
+}
+
+void rotateLeft(Node *& parent) {
+	Node * oldroot = parent;
+	Node * newroot = parnet->right;
+	parent = newroot;
+	oldroot->right = newroot->left;
+	newroot->left = oldroot;
+
+	oldroot->right = updateRightHeight(oldroot);
+	newroot->left = updateLeftHeight(newroot);
+}

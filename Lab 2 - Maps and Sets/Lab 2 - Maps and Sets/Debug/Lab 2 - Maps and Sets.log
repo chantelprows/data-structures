@@ -1,0 +1,4 @@
+﻿  main.cpp
+c:\users\chant\onedrive\documents\visual studio 2015\projects\cs 235 projects\lab 2 - maps and sets\lab 2 - maps and sets\main.cpp(132): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Lab 2 - Maps and Sets.vcxproj -> C:\Users\chant\OneDrive\Documents\Visual Studio 2015\Projects\CS 235 Projects\Lab 2 - Maps and Sets\Debug\Lab 2 - Maps and Sets.exe
+  Lab 2 - Maps and Sets.vcxproj -> C:\Users\chant\OneDrive\Documents\Visual Studio 2015\Projects\CS 235 Projects\Lab 2 - Maps and Sets\Debug\Lab 2 - Maps and Sets.pdb (Partial PDB)
